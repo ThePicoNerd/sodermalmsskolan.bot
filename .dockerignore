@@ -1,0 +1,5 @@
+node_modules
+dist
+templates
+values.yaml
+yarn-error.lock
