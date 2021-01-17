@@ -100,7 +100,9 @@ export default class InstagramService extends TypedEmitter<InstagramServiceEvent
       internalUid: internalUid,
     }
 
-    const token = jwt.sign(payload, this.jwtSecret);
+    const token = jwt.sign(payload, this.jwtSecret, {
+      expiresIn: 86400 // 24 hours
+    });
 
     const thread = this.getDirectThread([uid]);
 

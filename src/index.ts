@@ -131,9 +131,7 @@ router.get("/instagram/verify", async (ctx) => {
 
     await user.save();
 
-    ctx.redirect("")
-
-    return ctx.body = "ditt användarnamn har bekräftats";
+    ctx.redirect("https://södermalmsskolan.com/konto/notiser");
   } catch (error) {
     ctx.status = 400;
     return ctx.body = "could not verify token (it might be invalid)";
